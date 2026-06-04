@@ -1,0 +1,52 @@
+{
+  "name": "@sevencat/workprotocol-rate-limiter",
+  "version": "1.0.0",
+  "description": "Configurable Express and Hono rate limiter middleware with fixed-window, sliding-window, and token-bucket strategies.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "preflight": "npm run typecheck && npm run test && npm run build"
+  },
+  "keywords": [
+    "rate-limit",
+    "express",
+    "hono",
+    "redis",
+    "middleware",
+    "typescript"
+  ],
+  "license": "MIT",
+  "dependencies": {},
+  "peerDependencies": {
+    "express": ">=4",
+    "hono": ">=4",
+    "ioredis": ">=5"
+  },
+  "peerDependenciesMeta": {
+    "express": {
+      "optional": true
+    },
+    "hono": {
+      "optional": true
+    },
+    "ioredis": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^22.15.30",
+    "express": "^5.1.0",
+    "hono": "^4.8.0",
+    "typescript": "^5.8.3",
+    "vitest": "^4.1.8"
+  }
+}
